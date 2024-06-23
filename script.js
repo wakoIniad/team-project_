@@ -24,7 +24,7 @@ $(".gameboy-container").hover(function() {
         setTimeout(function(){
             flag = true;
         },dist*100);
-    },500);
+    },750);
 },function(){
     $(".game-preview .original-scroller").scrollTop(0);
 });
