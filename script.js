@@ -10,6 +10,7 @@ $( window ).on( "resize", ()=> {
 
 _();
 
+$(window).scrollTop(0);
 $(window).scrollTop($("#prologue").position().top);
 
 let flag = true;
