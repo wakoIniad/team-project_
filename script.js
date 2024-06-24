@@ -10,8 +10,9 @@ $( window ).on( "resize", ()=> {
 
 _();
 
-$(window).scrollTop(0);
-$(window).scrollTop($("#prologue").position().top);
+//$(window).scrollTop(0);
+//$(window).scrollTop($("#prologue").scrollTop());
+if(!window.location.href.endsWith("#prologue"))window.location.href += "#prologue";
 
 let flag = true;
 $(".gameboy-container").hover(function() {
