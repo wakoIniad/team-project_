@@ -15,19 +15,37 @@ _();
 if(!window.location.hash)window.location.href += "#prologue";
 
 let flag = true;
-$(".gameboy-container").hover(function() {
+let counter = 0;
+let interval;
+$(".game-preview .original-scroller").hover(function() {
+    
+
+    
     setTimeout(function(){
-        if(!flag)return;
-        flag = false
-        const from = $(".gameboy-container .explan .anchor.prefix").position().top;
-        const to = $(".gameboy-container .explan .anchor.sufix").position().top;
-        const dist = to-from;
-        $(".game-preview .original-scroller").animate({
-            scrollTop: dist
-        }, dist*100, "swing");
-    },750);
+        interval = setInterval(function(){
+            if(flag) {
+                $("")
+            }
+        },100);
+
+        $(".game-preview .original-scroller").scroll(function(){
+            flag = false;
+            const my_c = counter ++;
+            setTimeout(function(){
+                if(my_c === counter)flag = true;
+            },100);
+        });
+    },750)
+
 },function(){
     $(".game-preview .original-scroller").stop();
     $(".game-preview .original-scroller").scrollTop(0);
     flag = true;
+    counter = 0;
+    if(interval)clearInterval(interval);
 });
+/*$(".gameboy-container").on("click",function(){
+    $(".game-preview .original-scroller").stop();
+    flag = true;
+})*/
+

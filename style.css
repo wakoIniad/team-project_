@@ -317,7 +317,7 @@ img.gameboy-img:after {
 	height: 0%;
 	width: 80%;
 	
-	transition:all .3s;
+	transition:all .3s; /*説明にアニメーションを付けたいなら、ここを有効にする*/
 }
 .gameboy-container:hover .gb-frame-bottom .explan {
 	visibility: visible;
@@ -460,8 +460,8 @@ img.gameboy-img:after {
     
 	/*scrollbar-color: #FAF8D8 rgb(222, 148, 149);*/
     /*scrollbar-color: #FAF8D8 rgb(222, 18, 149);*/
-    scrollbar-color: #FAF8D8 rgb(33, 33, 33);
-    scrollbar-width: none;
+    scrollbar-color: rgba(200,255,255,0.5)/*rgba(240, 249, 216, 1)*/ rgba(33, 33, 33,0);
+    scrollbar-width: thin;
 }
 
 /*.tile.member-introduction h1,*/.dotgothic16-regular {
