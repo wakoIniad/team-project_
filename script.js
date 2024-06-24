@@ -14,22 +14,39 @@ _();
 //$(window).scrollTop($("#prologue").scrollTop());
 if(!window.location.hash)window.location.href += "#prologue";
 
-$(".game-preview").hover(function() {
+$(".gameboy-container").hover(function() {
+    
+    const geap = $(".gameboy-container .explan .anchor.prefix");
+    const geas = $(".gameboy-container .explan .anchor.sufix");
+    const gei = $(".gameboy-container .explan").innerWidth();
+    const from = geap.position().top;
+    const to = geas.position().top;
+    const dist = to-from;
+    const scrollTime = dist * 15 * (gei / 380);
+
     function autoScroll() {
-        const from = $(".gameboy-container .explan .anchor.prefix").position().top;
-        const to = $(".gameboy-container .explan .anchor.sufix").position().top;
-        const dist = to-from;
+        
         $(".game-preview .original-scroller").animate({
             scrollTop: dist
-        }, dist*100, "linear");
+        }, scrollTime, "linear");
     }
     setTimeout(autoScroll,750);
-
+    /**
+     * 25 : 380
+     * 25 * 200 / 380
+     */
+    
     var timer = false;
-    $(".game-preview .original-scroller").scroll( function(){
+    const go = $(".game-preview .original-scroller");
+    let counter = 0;
+    go.scroll( function(){
       if( timer !== false ){
         clearTimeout( timer );
-        $(".game-preview .original-scroller").stop();
+        counter ++;
+        if(counter > 3) {
+            go.stop();
+            counter = 0;
+        }
       }
       timer = setTimeout( autoScroll, 200 );
     });
