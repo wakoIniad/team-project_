@@ -10,6 +10,8 @@ $( window ).on( "resize", ()=> {
 
 _();
 
+$(window).scrollTop($("#prologue").position().top);
+
 let flag = true;
 $(".gameboy-container").hover(function() {
     setTimeout(function(){
@@ -21,10 +23,9 @@ $(".gameboy-container").hover(function() {
         $(".game-preview .original-scroller").animate({
             scrollTop: dist
         }, dist*100, "swing");
-        setTimeout(function(){
-            flag = true;
-        },dist*100);
     },750);
 },function(){
+    $(".game-preview .original-scroller").stop();
     $(".game-preview .original-scroller").scrollTop(0);
+    flag = true;
 });
