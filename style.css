@@ -313,10 +313,12 @@ img.gameboy-img:after {
 }
 .gb-frame-bottom .explan {
 	/*mark*/
-	visibility: hidden;
+	/*visibility: hidden;*//*これから*/
+	display: none;/*これへ変更*/
 }
 .gameboy-container:hover .gb-frame-bottom .explan {
-	visibility: visible;
+	/*visibility: visible;*/
+	display: block;
     height: 75%;
     width:80%;
 	position: absolute;
