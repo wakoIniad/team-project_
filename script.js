@@ -1,3 +1,7 @@
+$(window).on("load",function(){
+    $()
+})
+
 const aspect = 1.50189907759;
 function _() {
     $(".game-preview").outerHeight($(".game-preview").width()*aspect);
@@ -22,7 +26,7 @@ $(".gameboy-container").hover(function() {
     const from = geap.position().top;
     const to = geas.position().top;
     const dist = to-from;
-    const scrollTime = dist * 15 * (gei / 380);
+    const scrollTime = dist * 10 * (gei / 380);
 
     function autoScroll() {
         
@@ -43,12 +47,12 @@ $(".gameboy-container").hover(function() {
       if( timer !== false ){
         clearTimeout( timer );
         counter ++;
-        if(counter > 3) {
+        if(counter > 2) {
             go.stop();
             counter = 0;
         }
       }
-      timer = setTimeout( autoScroll, 200 );
+      timer = setTimeout( autoScroll, 400 );
     });
 
 },function(){
