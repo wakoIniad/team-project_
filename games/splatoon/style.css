@@ -1,3 +1,17 @@
+#container{
+    height: 400vh;
+}
+
 .background {
     background-image: url(concept.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:relative;
+    width: 100vw;
+    height: 99vh;
+    background-position: center;
+    clip-path: inset(0 0 0 10%);
+    top:-16px;
+    left:-10%;
+    opacity: 0.9;
 }
