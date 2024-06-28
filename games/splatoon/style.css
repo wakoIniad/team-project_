@@ -11,7 +11,27 @@
     height: 99vh;
     background-position: center;
     clip-path: inset(0 0 0 10%);
-    top:-16px;
+    top:-100px;
     left:-10%;
     opacity: 0.9;
+}
+
+.new-bg {
+    background-image: url(splatoon2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 102%;
+    width: 99%;
+    height: 100%;
+}
+
+.new-bg::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: linear-gradient(90deg,rgba(255,255,255,0) 40%, #222 90%);
+    position: absolute;
 }
