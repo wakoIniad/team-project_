@@ -1,6 +1,38 @@
+#container{
+    height: 400vh;
+}
+
 .background {
     background-image: url(concept.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center 63%;
+    position:relative;
+    width: 100vw;
+    height: 145vh;
+    background-position: center;
+    clip-path: inset(0 0 33vh 10%);
+    top:-100px;
+    left:-10%;
+    opacity: 0.9;
+}
+
+.new-bg {
+    background-image: url(building.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 102%;
+    width: 99%;
+    height: 100%;
+}
+
+.new-bg::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: linear-gradient(270deg,rgba(255,255,255,0) 40%, #222 90%);
+    position: absolute;
 }
