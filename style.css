@@ -204,7 +204,7 @@ section:nth-child(2n){
 	padding-top: 0em;
 }
 
-.explan {
+.explain {
 	overflow-wrap: break-word;
 }
 
@@ -311,15 +311,19 @@ img.gameboy-img:after {
     padding: 10%;
 	position: relative;
 }
-.gb-frame-bottom .explan {
+.gb-frame-bottom .explain {
 	/*mark*/
 	visibility: hidden;
 	height: 0%;
 	width: 80%;
 	
 	transition:all .3s; /*説明にアニメーションを付けたいなら、ここを有効にする*/
+	
+	font-family: "DotGothic16", sans-serif;
+	font-weight: 400;
+	font-style: normal;
 }
-.gameboy-container:hover .gb-frame-bottom .explan {
+.gameboy-container:hover .gb-frame-bottom .explain {
 	visibility: visible;
     height: 75%;
     width:80%;
@@ -434,8 +438,29 @@ img.gameboy-img:after {
 	}*/
 }
 
-
 @media (min-aspect-ratio: 3/2) {
+	#main {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+	}
+	/*.tile.game-preview {
+		height:calc(100vw/3*1.5);
+	}*/
+}
+
+@media (min-width: 768px) {
+	#main {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+	}
+	/*.tile.game-preview {
+		height:calc(100vw/2*1.5);
+	}*/
+}
+
+@media (min-width: 1024px) {
 	#main {
         -moz-column-count: 3;
         -webkit-column-count: 3;
@@ -476,14 +501,6 @@ img.gameboy-img:after {
   	font-style: normal;
 }
 
-
-
-.explan {
-	font-family: "DotGothic16", sans-serif;
-	font-weight: 400;
-	font-style: normal;
-}
-
 .prologue {
 	background-image:url(wood-texture2.jpg);
 	background-color: rgba(0,0,0,0.3);
@@ -491,9 +508,12 @@ img.gameboy-img:after {
 }
 
 .prologue #top {
-  /*text-shadow: rgba(200, 0, 133, 0.2) 5px 5px;*/
-  color:rgba(255,255,255,0.9);
-  text-decoration: underline;
+  	/*text-shadow: rgba(200, 0, 133, 0.2) 5px 5px;*/
+  	color:rgba(255,255,255,0.9);
+  	text-decoration: underline;
+  
+  	word-break: keep-all;
+	overflow-wrap: break-word;
 }
 
 
@@ -521,4 +541,21 @@ a.copyright {
 	font-family: "Mochiy Pop One", sans-serif;
   	font-weight: 400;
   	font-style: normal;
+}
+
+/*
+ヘッダーがゲームボーイの下に来る問題を解決する
+*/
+
+/*ゲームボーイ.z-index = 5*/
+
+.globalMenuSp .image-container {
+	z-index: 7;
+}
+
+
+@media (max-aspect-ratio: 1/1) {
+	.globalMenuSp .image-container img{
+		border-radius: 10%;
+	}	
 }

@@ -20,6 +20,13 @@
   width: 50%;
 }
 
+@media (max-aspect-ratio: 1/1) {
+	.text-container {
+    width: 100%;
+    bottom: 0;
+  }
+}
+
 .text-container img {
   width: 70%;
   height: auto;
@@ -27,6 +34,8 @@
 
 h1 {
   color:#fff;
+	word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 h2 {

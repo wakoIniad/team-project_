@@ -3,7 +3,6 @@
 }
 
 .background {
-    background-image: url(concept.jpg);
     position:relative;
     width: 100vw;
     height: 99vh;
@@ -13,3 +12,17 @@
     left:-10%;
     opacity: 0.9;
 }
+
+.background#b1 {
+    background-image: url(concept.jpg);
+}
+/*.background#b2{
+    background-image: url(concept.jpg);
+}
+
+.frame {
+    display: block;
+    height:100vh;
+    width:100%;
+    position: absolute;
+}*/

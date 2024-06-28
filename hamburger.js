@@ -38,7 +38,7 @@ function hum() {
 
     console.log(screenWidth,screenHeight,screenWidth/screenHeight)
     // 分岐処理
-    if ((screenWidth / screenHeight <= 1)) {
+    if ((screenWidth / screenHeight <= 1) && screenWidth <= 768) {
         flag_hum = true;
         
     $(function() {
