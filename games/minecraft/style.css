@@ -12,8 +12,8 @@
     height: 145vh;
     background-position: center;
     clip-path: inset(0 0 33vh 10%);
-    top:-100px;
-    left:-10%;
+    top:-80px;
+    left:-15%;
     opacity: 0.9;
 }
 
@@ -35,4 +35,48 @@
     display: block;
     background: linear-gradient(270deg,rgba(255,255,255,0) 40%, #222 90%);
     position: absolute;
+}
+
+.new-bg2 {
+    background-image: url(night.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 204%;
+    width: 99%;
+    height: 105%;
+}
+
+.container2 {
+    position:absolute;
+    top:102vh;
+    left:5%;
+}
+
+.img-size-boss {
+    width: 23%;
+    position:relative;
+    top:0px;
+}
+
+.img-size-Warden {
+    width: 15%;
+    position:relative;
+    top:0px;
+}
+
+.img-mob-position {
+    position:relative;
+    top:-10px;
+}
+
+.container3 {
+    position:absolute;
+    top:204vh;
+    left:5%;
+}
+
+.set-img {
+    text-align: center;
 }
