@@ -1,0 +1,7 @@
+		<p>
+			<img src="ZombieVilager.gif" class="img-mob-position" alt="村人ゾンビ">
+			<img src="220px-Ghast_JE2_BE2.webp" class="img-mob-position" alt="ガスト">
+			<img src="Zoglin_attacking.webp" class="img-mob-position" alt="ゾグリン">
+			<img src="Zombie_becoming_Drowned.webp" class="img-mob-position" alt="ゾンビがドラウンド">
+			<img src="Charged_Creeper_Animated.webp" class="img-mob-position" alt="帯電クリーパー">
+		</p>
