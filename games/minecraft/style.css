@@ -23,7 +23,7 @@
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    top: 104%;
+    top: 102%;
     width: 99%;
     height: 100%;
 }
@@ -43,14 +43,14 @@
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    top: 205%;
+    top: 203%;
     width: 99%;
     height: 105%;
 }
 
 .container2 {
     position:absolute;
-    top:102vh;
+    top:101vh;
     left:5%;
 }
 
@@ -73,7 +73,7 @@
 
 .container3 {
     position:absolute;
-    top:198vh;
+    top:202vh;
     left:5%;
 }
 
@@ -87,8 +87,7 @@
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    left:10%;
-    top: 311%;
+    top: 309%;
     width: 99%;
     height: 105%;
 }
@@ -104,6 +103,6 @@
 
 .container4 {
     position:absolute;
-    top:302vh;
+    top:308vh;
     left:3%;
 }
