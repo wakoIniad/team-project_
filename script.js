@@ -85,7 +85,8 @@ const skyScraperImage = $("#main");
 /**settings */
 const darkModeGameBoyTheme = 'gameboy-frame-shadow.png';
 /**'gameboy-frame-luna.png' */
-themeButton.change(function(){
+
+function onThemeChanging() {
     if($(this).prop('checked')) {
         //themeMode = "day";
         gameBoy.attr('src','gameboy-frame.png');
@@ -99,6 +100,11 @@ themeButton.change(function(){
         $(".member-introduction:target").css('animation', 'highlight 2.4s ease-in-out');
         memberIntoroduction.removeClass("luna");
         memberIntoroduction.addClass("sol");
+        try {
+            $.cookie('theme','sol')
+        } catch(e) {
+            console.log(e);
+        }
     } else {
         //themeMode = "night";
         gameBoy.attr('src',darkModeGameBoyTheme);
@@ -110,7 +116,28 @@ themeButton.change(function(){
         memberIntoroduction.addClass("luna");
         memberIntoroduction.removeClass("sol");
         
+        try {
+            $.cookie('theme','luna')
+        } catch(e) {
+            console.log(e);
+        }
     }
-
-    
+}
+themeButton.change(function(){
+    onThemeChanging.call(this);
 })
+
+
+try {
+    let theme = $.cookie('theme');
+    if(theme) {
+        if(theme === 'luna') {
+            $("#toggle--daynight").attr('checked',false);
+        } else if(theme === 'sol') {
+            $("#toggle--daynight").attr('checked',true);
+        }
+    }
+    onThemeChanging();
+} catch(e) {
+    console.log(e);
+}
