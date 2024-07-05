@@ -114,8 +114,8 @@
 }
 
 .container2 .photo-container {
-    width: 100%;
-    height: 100vh;
+    width: 100vmin;
+    height: 100vmin;
     position: absolute;
 }
 
@@ -126,7 +126,7 @@
 }
 
 .photos.p1 {
-    width: 30%;
+    height: 30vmin;
     right: 10%;
     top: 15%;
     transform: rotate(15deg);
@@ -134,13 +134,14 @@
 }
 
 .photos.p2 {
+    height: 20vmin;
     border: outset 10px rgb(0,0,50);
     left: 0%;
     top: 40%;
-    width: 20%;
     transform: rotate(5deg);
 }
 .photos.p3 {
+    height: 30vmin;
     right: 50%;
     top: 1%;
     transform: rotate(-4deg);
@@ -149,9 +150,9 @@
 
 
 .photos.p4 {
+    height: 35vmin;
     right: 40%;
     top: 50%;
-    width: 35%;
     transform: rotate(-7deg);
     
     border: groove 10px rgb(230,220,250);
