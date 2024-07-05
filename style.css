@@ -366,8 +366,23 @@ img.gameboy-img:after {
 	border-top:  solid;
 }
 
-.tile.member-introduction:target {
+
+.tile.member-introduction.luna:target {
+	animation: luna-highlight 2.4s ease-in-out;
+}
+
+.tile.member-introduction.sol:target {
 	animation: highlight 2.4s ease-in-out;
+}
+
+
+@keyframes luna-highlight {
+	0% {
+		background-color: #89c3eb;
+	}
+	50% {
+		background-color: #4d5aaf;	
+	}
 }
 
 @keyframes highlight {
@@ -389,7 +404,6 @@ img.gameboy-img:after {
 	-webkit-column-count: 1;
 	column-count: 1;
 
-	/*background-image: url(wood-texture3.jpg);*/
 	background-image: url("los-angeles-downtown-buildings-night.jpg");
 	
 	/*background-color: rgba(33,255,255,0.6);*/
@@ -509,6 +523,13 @@ img.gameboy-img:after {
 .prologue {
 	background-image:url(wood-texture2.jpg);
 	background-color: rgba(0,0,0,0.3);
+	background-blend-mode:darken;
+}
+
+
+.prologue-luna {
+	background-color: rgba(33,200,255,0.6);
+	/*background-blend-mode:lighten;*/
 	background-blend-mode:darken;
 }
 

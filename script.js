@@ -19,7 +19,9 @@ _();
 if(!window.location.hash)window.location.href += "#prologue";
 
 $(".gameboy-container").hover(function() {
-    
+    $(this).children(".eyecatch-overlay").css('background-image','url("gb-screen.jpg")');
+    $(this).children(".eyecatch-overlay").css('opacity',0.5);
+
     const geap = $(".gameboy-container .explain .anchor.prefix");
     const geas = $(".gameboy-container .explain .anchor.sufix");
     const gei = $(".gameboy-container .explain").innerWidth();
@@ -56,9 +58,59 @@ $(".gameboy-container").hover(function() {
     });
 
 },function(){
+    if(!($("#toggle--daynight")).prop('checked')) {
+        ToggleGameBoyScreenDarkMode ()
+    }
     $(".game-preview .original-scroller").stop();
     $(".game-preview .original-scroller").scrollTop(0);
 });
 
+function ToggleGameBoyScreenDarkMode () {
+    blueLight.css('background-image','url("black-screen.jpg")');
+    blueLight.css('display', 'block');
+    blueLight.css('opacity',0.75);
+}
 
-let themeMode = "light";
+//let themeMode = "day";
+
+const themeButton = $("#toggle--daynight");
+/**モード変更で変更する要素一覧 */
+const gameBoy = $(".gameboy-img");
+const memberIntoroduction = $(".member-introduction");
+const prologue = $("#prologue");
+const blueLight = $(".eyecatch-overlay");
+const skyScraperImage = $("#main");
+
+
+/**settings */
+const darkModeGameBoyTheme = 'gameboy-frame-shadow.png';
+/**'gameboy-frame-luna.png' */
+themeButton.change(function(){
+    if($(this).prop('checked')) {
+        //themeMode = "day";
+        gameBoy.attr('src','gameboy-frame.png');
+        memberIntoroduction.css('background-color','rgb(255, 172, 38)');
+        memberIntoroduction.css('color','rgb(255,200,0)');
+        prologue.removeClass("prologue-luna");
+        blueLight.attr('src','gb-screen.jpg');
+        blueLight.css('display', 'none');
+        blueLight.css('opacity',0);
+        skyScraperImage.css('background-image','url("los-angeles-downtown-buildings-night.jpg")');
+        $(".member-introduction:target").css('animation', 'highlight 2.4s ease-in-out');
+        memberIntoroduction.removeClass("luna");
+        memberIntoroduction.addClass("sol");
+    } else {
+        //themeMode = "night";
+        gameBoy.attr('src',darkModeGameBoyTheme);
+        memberIntoroduction.css('background-color','#4d5aaf');
+        memberIntoroduction.css('color','#89c3eb');
+        prologue.addClass("prologue-luna");
+        ToggleGameBoyScreenDarkMode ();
+        skyScraperImage.css('background-image','url("skyscraper-luna.png")');
+        memberIntoroduction.addClass("luna");
+        memberIntoroduction.removeClass("sol");
+        
+    }
+
+    
+})
