@@ -60,3 +60,5 @@ $(".gameboy-container").hover(function() {
     $(".game-preview .original-scroller").scrollTop(0);
 });
 
+
+let themeMode = "light";

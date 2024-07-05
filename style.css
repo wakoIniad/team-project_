@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+:root {
+	--member-intoroduction-bg-color: rgb(255, 172, 38);
+	--member-intoroduction-color:rgb(255,200,0);
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -351,11 +356,11 @@ img.gameboy-img:after {
 
 	/*background-color: rgb(249, 174, 53);*/
 	/*background-color: rgb(239, 148, 0);*/
-	background-color: rgb(255, 172, 38);
+	background-color: var(--member-intoroduction-bg-color);
 	
 	/*background-color: rgba(33,33,33);*/
 	/*background-color: rgba(2, 21, 43);*/
-	color: rgb(255,200,0);
+	color: var(--member-intoroduction-color);
 	border-radius: 10% 0%;
 
 	border-top:  solid;
@@ -558,4 +563,17 @@ a.copyright {
 	.globalMenuSp .image-container img{
 		border-radius: 10%;
 	}	
+}
+
+@media (max-width: 800px) {
+	.globalMenuSp .image-container img{
+		border-radius: 10%;
+	}	
+}
+
+.fix-menu-rb {
+	right: 10px;
+	bottom: 10px;
+	position: fixed;
+	z-index: 5;
 }
