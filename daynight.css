@@ -4,9 +4,6 @@
   box-sizing: border-box;
 }
 
-/* =====================================================
-   Some defaults across all toggle demos
-   ===================================================== */
 .toggle {
   display: block;
   text-align: center;
@@ -48,9 +45,6 @@
   display: block;
 }
 
-/* ===================================================
-   Day/Night and Gender toggle buttons
-   =================================================== */
 .toggle--daynight .toggle--btn,
 .toggle--like .toggle--btn {
   position: relative;

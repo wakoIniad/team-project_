@@ -162,32 +162,40 @@
     box-shadow: 10px 5px 5px rgba(0,0,0,0.65);
 }
 
+.pins {
+    position: absolute;
+}
+
+.pc1 .photos {
+    transform-origin: center top 0;
+}
+
 
 @keyframes kawaii-anime1 {
     0% {
-        transform: rotate(-15deg);
+        transform: rotate(-10deg);
     }
     34% {
-        transform: rotate(-15deg);
+        transform: rotate(-10deg);
     }
     40% {
         transform: rotate(10deg);
 
     }
-    79% {
+    59% {
         transform: rotate(15deg);
     }
     100% {
-        transform: rotate(-15deg);
+        transform: rotate(-10deg);
     }
 }
 
 @keyframes kawaii-anime2 {
     0% {
-        transform: rotate(-10deg);
+        transform: rotate(-7deg);
     }
     34% {
-        transform: rotate(-10deg);
+        transform: rotate(0deg);
     }
     40% {
         transform: rotate(0deg);
@@ -197,45 +205,45 @@
         transform: rotate(5deg);
     }
     100% {
-        transform: rotate(-10deg);
+        transform: rotate(-7deg);
     }
 }
 
 @keyframes kawaii-anime3 {
     0% {
-        transform: rotate(10deg);
+        transform: rotate(-3deg);
     }
     34% {
-        transform: rotate(10deg);
+        transform: rotate(-3deg);
     }
     40% {
-        transform: rotate(5deg);
+        transform: rotate(2deg);
 
     }
     79% {
-        transform: rotate(-4deg);
+        transform: rotate(6deg);
     }
     100% {
-        transform: rotate(10deg);
+        transform: rotate(-3deg);
     }
 }
 
 @keyframes kawaii-anime4 {
     0% {
-        transform: rotate(15deg);
+        transform: rotate(5deg);
     }
     34% {
-        transform: rotate(15deg);
+        transform: rotate(0deg);
     }
     40% {
         transform: rotate(0deg);
 
     }
-    79% {
+    59% {
         transform: rotate(-7deg);
     }
     100% {
-        transform: rotate(15deg);
+        transform: rotate(5deg);
     }
 }
 
@@ -245,7 +253,7 @@
     top: 15%;
     transform: rotate(15deg);
     /*border: groove 10px rgb(250,220,220);*/
-	animation: kawaii-anime1 2.4s ease-in-out infinite;
+	animation: kawaii-anime1 3.6s ease-in-out infinite;
 }
 
 .photos.p2 {
@@ -254,7 +262,7 @@
     left: 0%;
     top: 30%;
     transform: rotate(5deg);
-	animation: kawaii-anime2 2.4s ease-in-out infinite;
+	animation: kawaii-anime2 3.6s ease-in-out infinite;
 }
 .photos.p3 {
     height: 30vmin;
@@ -262,7 +270,7 @@
     top: 1%;
     transform: rotate(-4deg);
     /*border: inset 10px rgb(0,0,0);*/
-	animation: kawaii-anime3 2.4s ease-in-out infinite;
+	animation: kawaii-anime3 3.6s ease-in-out infinite;
 }
 
 .photos.p4 {
@@ -272,7 +280,7 @@
     transform: rotate(-7deg);
     
     /*border: groove 10px rgb(230,220,250);*/
-	animation: kawaii-anime4 2.4s ease-in-out infinite;
+	animation: kawaii-anime4 3.6s ease-in-out infinite;
 }
 
 .photos.pb1 {
@@ -314,3 +322,15 @@
     width: 100%;
     text-align: center;
 }
+
+/*
+.photos::after {
+    content: url('pin.png');
+    width: 4em;
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    z-index: 2;
+    background: #fff
+}*/
