@@ -1,3 +1,7 @@
+#allpage {
+    overflow: hidden;
+}
+
 .dotgothic16-regular {
     width: 100%;
 }
@@ -70,6 +74,7 @@
     left:5%;
     width:  90%;
     height: 100vh;
+    overflow: hidden;
 }
 
 .img-size-boss {
@@ -95,6 +100,8 @@
     left:5%;
     width: 90%;
     height: 100vh;
+
+    overflow: hidden;
 }
 
 .set-img {
@@ -131,10 +138,19 @@
     margin:0px;
     padding:0px;
     width: 95%;
+    overflow: hidden;
 }
 
-.container2 .photo-container , .container3 .photo-container {
+.container2 .photo-container {
     width: 100vmin;
+    height: 100vmin;
+    position: absolute;
+    
+    overflow: hidden;
+}
+
+.container3 .photo-container {
+    width: 200vmin;
     height: 100vmin;
     position: absolute;
 }
@@ -180,7 +196,7 @@
 
 .photos.pb1 {
     height: 30vmin;
-    right: 10%;
+    right: 55%/*calc(10%/2+50%)*/;
     top: 15%;
     transform: rotate(15deg);
     /*border: groove 10px rgb(250,220,220);*/
@@ -189,13 +205,13 @@
 .photos.pb2 {
     height: 25vmin;
     /*border: outset 10px rgb(0,0,50);*/
-    right: -0%;
+    right: 50%/*calc(-0%/2+50%)*/;
     top: 40%;
     transform: rotate(5deg);
 }
 .photos.pb3 {
     height: 30vmin;
-    right: -50%;
+    right: 25%/*calc(-50%/2+50%)*/;
     top: 1%;
     transform: rotate(-4deg);
     /*border: inset 10px rgb(0,0,0);*/
@@ -203,7 +219,7 @@
 
 .photos.pb4 {
     height: 35vmin;
-    right: 40%;
+    right: 70%/*calc(40%/2+50%)*/;
     top: 50%;
     transform: rotate(-7deg);
     

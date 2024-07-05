@@ -100,6 +100,7 @@ div#allpage{width:100%;}
   display: block;
   height:3em;
   margin:auto;
+  position: relative;
 }
 
 .goto_home > a {
@@ -119,4 +120,18 @@ div#allpage{width:100%;}
 .sns > a {
   display:inline-block;
   margin: auto;
+}
+
+.leaf_accent {
+ position:absolute;
+ width: 30vmin; 
+ top: 50%;
+ right: 25vw;
+ margin: 0;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .leaf_accent {
+    display: none;
+  }
 }
