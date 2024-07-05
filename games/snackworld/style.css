@@ -37,7 +37,8 @@
     width: 100%;
     height: 100%;
     display: block;
-    background: linear-gradient(270deg,rgba(255,255,255,0) 40%, #222 90%);
+    /*background: linear-gradient(270deg,rgba(255,255,255,0) 40%, #222 90%);*/
+    background-color: rgba(255,255,255,0.5);
     position: absolute;
 }
 
@@ -52,11 +53,22 @@
     height: 105%;
 }
 
+
+.new-bg2::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    /*background: linear-gradient(270deg,rgba(255,255,255,0) 40%, #222 90%);*/
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+}
+
 .container2 {
     position:absolute;
     top:101vh;
     left:5%;
-    width:  100%;
+    width:  90%;
     height: 100vh;
 }
 
@@ -81,6 +93,8 @@
     position:absolute;
     top:202vh;
     left:5%;
+    width: 90%;
+    height: 100vh;
 }
 
 .set-img {
@@ -88,7 +102,7 @@
 }
 
 .new-bg3 {
-    background-image: url(background/switch.jpg);
+    background-image: url(background/switch.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -98,22 +112,28 @@
     height: 105%;
 }
 
+
+
 .new-bg3::after {
     content: "";
     width: 100%;
     height: 100%;
     display: block;
-    background: linear-gradient(270deg,rgba(255,255,255,0) 40%, #222 90%);
+    background: linear-gradient(0deg,rgba(255,255,255,0) 40%, rgba(0,0,0) 90%);
     position: absolute;
 }
 
 .container4 {
     position:absolute;
     top:308vh;
-    left:3%;
+    margin:0;
+	box-sizing: border-box;
+    margin:0px;
+    padding:0px;
+    width: 95%;
 }
 
-.container2 .photo-container {
+.container2 .photo-container , .container3 .photo-container {
     width: 100vmin;
     height: 100vmin;
     position: absolute;
@@ -122,7 +142,8 @@
 .photo-container .photos {
     position: absolute;
     /*transition: 1s all;*/
-    border-radius: 5%;
+    /*border-radius: 5%;*/
+    box-shadow: 10px 5px 5px rgba(0,0,0,0.65);
 }
 
 .photos.p1 {
@@ -130,14 +151,14 @@
     right: 10%;
     top: 15%;
     transform: rotate(15deg);
-    border: groove 10px rgb(250,220,220);
+    /*border: groove 10px rgb(250,220,220);*/
 }
 
 .photos.p2 {
-    height: 20vmin;
-    border: outset 10px rgb(0,0,50);
+    height: 30vmin;
+    /*border: outset 10px rgb(0,0,50);*/
     left: 0%;
-    top: 40%;
+    top: 30%;
     transform: rotate(5deg);
 }
 .photos.p3 {
@@ -145,15 +166,54 @@
     right: 50%;
     top: 1%;
     transform: rotate(-4deg);
-    border: inset 10px rgb(0,0,0);
+    /*border: inset 10px rgb(0,0,0);*/
 }
 
-
 .photos.p4 {
+    height: 40vmin;
+    right: 40%;
+    top: 40%;
+    transform: rotate(-7deg);
+    
+    /*border: groove 10px rgb(230,220,250);*/
+}
+
+.photos.pb1 {
+    height: 30vmin;
+    right: 10%;
+    top: 15%;
+    transform: rotate(15deg);
+    /*border: groove 10px rgb(250,220,220);*/
+}
+
+.photos.pb2 {
+    height: 25vmin;
+    /*border: outset 10px rgb(0,0,50);*/
+    right: -0%;
+    top: 40%;
+    transform: rotate(5deg);
+}
+.photos.pb3 {
+    height: 30vmin;
+    right: -50%;
+    top: 1%;
+    transform: rotate(-4deg);
+    /*border: inset 10px rgb(0,0,0);*/
+}
+
+.photos.pb4 {
     height: 35vmin;
     right: 40%;
     top: 50%;
     transform: rotate(-7deg);
     
-    border: groove 10px rgb(230,220,250);
+    /*border: groove 10px rgb(230,220,250);*/
+}
+
+#switch_h1 {
+    color: rgb(255,190,0);
+    /*position:absolute;
+    left: 45%;*/
+    width: 100%;
+    text-align: center;
 }
