@@ -20,9 +20,9 @@ if(!window.location.hash)window.location.href += "#prologue";
 
 $(".gameboy-container").hover(function() {
     
-    const geap = $(".gameboy-container .explan .anchor.prefix");
-    const geas = $(".gameboy-container .explan .anchor.sufix");
-    const gei = $(".gameboy-container .explan").innerWidth();
+    const geap = $(".gameboy-container .explain .anchor.prefix");
+    const geas = $(".gameboy-container .explain .anchor.sufix");
+    const gei = $(".gameboy-container .explain").innerWidth();
     const from = geap.position().top;
     const to = geas.position().top;
     const dist = to-from;
