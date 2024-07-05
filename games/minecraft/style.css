@@ -3,7 +3,7 @@
 }
 
 .background {
-    background-image: url(concept.jpg);
+    background-image: url(background/concept.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center 63%;
@@ -18,7 +18,7 @@
 }
 
 .new-bg {
-    background-image: url(building.jpg);
+    background-image: url(background/building.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -38,7 +38,7 @@
 }
 
 .new-bg2 {
-    background-image: url(night.png);
+    background-image: url(background/night.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -82,7 +82,7 @@
 }
 
 .new-bg3 {
-    background-image: url(mod.PNG);
+    background-image: url(background/mod.PNG);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
