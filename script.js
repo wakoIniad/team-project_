@@ -137,7 +137,7 @@ try {
             $("#toggle--daynight").attr('checked',true);
         }
     }
-    onThemeChanging();
+    onThemeChanging.call(themeButton);
 } catch(e) {
     console.log(e);
 }
