@@ -16,6 +16,12 @@
     opacity: 0.9;
 }
 
+.container2 {
+    position:absolute;
+    top:101vh;
+    left:5%;
+}
+
 .new-bg {
     background-image: url(splatoon2.png);
     background-size: cover;
@@ -28,6 +34,26 @@
 }
 
 .new-bg::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: linear-gradient(270deg,rgba(255,255,255,0) 40%, #222 90%);
+    position: absolute;
+}
+
+.new-bg2 {
+    background-image: url(splatoon3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 204%;
+    width: 99%;
+    height: 100%;
+}
+
+.new-bg2::after {
     content: "";
     width: 100%;
     height: 100%;
