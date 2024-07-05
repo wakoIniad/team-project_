@@ -21,6 +21,7 @@ if(!window.location.hash)window.location.href += "#prologue";
 $(".gameboy-container").hover(function() {
     $(this).children(".eyecatch-overlay").css('background-image','url("gb-screen.jpg")');
     $(this).children(".eyecatch-overlay").css('opacity',0.5);
+    $(this).children(".eyecatch-overlay").css('display','block');
 
     const geap = $(".gameboy-container .explain .anchor.prefix");
     const geas = $(".gameboy-container .explain .anchor.sufix");
@@ -93,9 +94,11 @@ function onThemeChanging() {
         memberIntoroduction.css('background-color','rgb(255, 172, 38)');
         memberIntoroduction.css('color','rgb(255,200,0)');
         prologue.removeClass("prologue-luna");
+        
         blueLight.attr('src','gb-screen.jpg');
         blueLight.css('display', 'none');
         blueLight.css('opacity',0);
+
         skyScraperImage.css('background-image','url("los-angeles-downtown-buildings-night.jpg")');
         $(".member-introduction:target").css('animation', 'highlight 2.4s ease-in-out');
         memberIntoroduction.removeClass("luna");
