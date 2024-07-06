@@ -19,9 +19,15 @@ _();
 if(!window.location.hash)window.location.href += "#prologue";
 
 $(".gameboy-container").hover(function() {
-    $(this).children(".eyecatch-overlay").css('background-image','url("gb-screen.jpg")');
+    
+    if(themeMode === "night") {
+        //$(this).children('.gameboy-img').attr('src','gameboy-frame-luna.png');
+        $(this).children(".eyecatch-overlay").css('background-image','url("green-screen.jpg")');
+    } else if(themeMode === "day") {
+        $(this).children(".eyecatch-overlay").css('background-image','url("gb-screen.jpg")');
+    }
     $(this).children(".eyecatch-overlay").css('opacity',0.5);
-    $(this).children(".eyecatch-overlay").css('display','block');
+    $(this).children(".eyecatch-overlay").css('display','block'); 
 
     const geap = $(".gameboy-container .explain .anchor.prefix");
     const geas = $(".gameboy-container .explain .anchor.sufix");
@@ -59,8 +65,20 @@ $(".gameboy-container").hover(function() {
     });
 
 },function(){
-    if(!($("#toggle--daynight")).prop('checked')) {
-        ToggleGameBoyScreenDarkMode ()
+    if(themeMode === "night") {
+        ToggleGameBoyScreenDarkMode ();
+        //$(this).children('.gameboy-img').attr('src','gameboy-frame-shadow.png');
+        
+        /*$(this).children(".eyecatch-overlay").css('display','none');
+        setTimeout(()=>$(this).children(".eyecatch-overlay").css('display','block'),0);
+        setTimeout(()=>{
+            $(".eyecatch-overlay").css('display','none');
+            setTimeout(()=>$(".eyecatch-overlay").css('display','block'),0);
+        },1000);*/
+    } else if(themeMode === "day") {
+        
+        $(this).children(".eyecatch-overlay").css('opacity',0);
+        $(this).children(".eyecatch-overlay").css('display','none'); 
     }
     $(".game-preview .original-scroller").stop();
     $(".game-preview .original-scroller").scrollTop(0);
@@ -72,7 +90,7 @@ function ToggleGameBoyScreenDarkMode () {
     blueLight.css('opacity',0.75);
 }
 
-//let themeMode = "day";
+let themeMode = "day";
 
 const themeButton = $("#toggle--daynight");
 /**モード変更で変更する要素一覧 */
@@ -81,7 +99,7 @@ const memberIntoroduction = $(".member-introduction");
 const prologue = $("#prologue");
 const blueLight = $(".eyecatch-overlay");
 const skyScraperImage = $("#main");
-
+const gamePageLink = $(".gamepage-link");
 
 /**settings */
 const darkModeGameBoyTheme = 'gameboy-frame-shadow.png';
@@ -89,7 +107,7 @@ const darkModeGameBoyTheme = 'gameboy-frame-shadow.png';
 
 function onThemeChanging() {
     if($(this).prop('checked')) {
-        //themeMode = "day";
+        themeMode = "day";
         gameBoy.attr('src','gameboy-frame.png');
         memberIntoroduction.css('background-color','rgb(255, 172, 38)');
         memberIntoroduction.css('color','rgb(255,200,0)');
@@ -109,7 +127,7 @@ function onThemeChanging() {
             console.log(e);
         }
     } else {
-        //themeMode = "night";
+        themeMode = "night";
         gameBoy.attr('src',darkModeGameBoyTheme);
         memberIntoroduction.css('background-color','#4d5aaf');
         memberIntoroduction.css('color','#89c3eb');
@@ -144,3 +162,24 @@ try {
 } catch(e) {
     console.log(e);
 }
+
+let cancelClick = true;
+gamePageLink.on('click',function(e) {
+    if(themeMode === 'night') {
+        if(cancelClick)e.preventDefault();
+        const item = $(this).parents(".gameboy-container").children('.fluorescence');
+        item.css({
+            "box-shadow":"0px 0px 50px 15px rgb(168, 250, 204,0.75)",
+            "border":" solid 16px rgba(170,250,236,0.65)",
+            "visibility":" visible",
+            "opacity":" 1"
+        })
+        //.addClass('');
+        setTimeout(()=>{
+            /*cancelClick = false;
+            $(this).click();
+            cancelClick = true;*/
+            window.location.href = $(this).attr('href');
+        },750);
+    }
+});
