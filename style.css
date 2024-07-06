@@ -579,9 +579,14 @@ img.gameboy-img:after {
 	color:white;
 }
 
-.menu-opt:hover {
+.menu-opt:not(#copyright_menu):hover {
 	color: rgba(200, 255, 251, 1);
 	text-shadow: 0 0 10px rgba(200, 255, 251, 1);
+}
+
+
+#copyright_menu {
+	color: gray;
 }
 
 
@@ -630,8 +635,4 @@ a.copyright {
 	bottom: 10px;
 	position: fixed;
 	z-index: 5;
-}
-
-#copyright_menu {
-
 }

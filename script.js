@@ -16,7 +16,7 @@ _();
 
 //$(window).scrollTop(0);
 //$(window).scrollTop($("#prologue").scrollTop());
-if(!window.location.hash)window.location.href += "#prologue";
+/*if(!window.location.hash)window.location.href += "#prologue";*/
 
 $(".gameboy-container").hover(function() {
     
