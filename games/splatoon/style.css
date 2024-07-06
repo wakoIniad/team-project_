@@ -11,7 +11,7 @@
     height: 99vh;
     background-position: center;
     clip-path: inset(0 0 0 10%);
-    top:-100px;
+    top:0px;
     left:-10%;
     opacity: 0.9;
 }
