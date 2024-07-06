@@ -1,5 +1,5 @@
 #container{
-    height: 500vh;
+    height: 400vh;
 }
 
 .background {
@@ -23,7 +23,7 @@
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    top: 102%;
+    top: 104%;
     width: 99%;
     height: 100%;
 }
@@ -43,15 +43,21 @@
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    top: 203%;
+    top: 205%;
     width: 99%;
     height: 105%;
 }
 
 .container2 {
     position:absolute;
-    top:101vh;
-    left:5%;
+    top:101.8vh;
+    left:3%;
+}
+
+.container2-text {
+    position:absolute;
+    top: 8vh;
+    width: 110%;
 }
 
 .img-size-boss {
@@ -74,7 +80,7 @@
 .container3 {
     position:absolute;
     top:202vh;
-    left:5%;
+    left:3%;
 }
 
 .set-img {
@@ -87,7 +93,7 @@
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    top: 309%;
+    top: 311%;
     width: 99%;
     height: 105%;
 }
@@ -103,6 +109,12 @@
 
 .container4 {
     position:absolute;
-    top:308vh;
+    top:306vh;
     left:3%;
+}
+
+.container4-text {
+    position:absolute;
+    top:8vh;
+    width: 113%;
 }
