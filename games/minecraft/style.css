@@ -1,5 +1,5 @@
 #container{
-    height: 400vh;
+    height: 500vh;
 }
 
 .background {
@@ -50,13 +50,13 @@
 
 .container2 {
     position:absolute;
-    top:101.8vh;
+    top:102.5vh;
     left:3%;
 }
 
 .container2-text {
     position:absolute;
-    top: 8vh;
+    top: -13px;
     width: 110%;
 }
 
@@ -115,6 +115,6 @@
 
 .container4-text {
     position:absolute;
-    top:8vh;
+    top: -13px;
     width: 113%;
 }
