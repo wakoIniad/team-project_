@@ -228,6 +228,19 @@ section:nth-child(2n){
 	height:100%;
 }
 
+
+.gameboy-container .fluorescence {
+
+	position: absolute;
+	width:52%;
+	height:26%;
+	left: 24%;
+	top: 14%;
+	/*background: rgba(200, 255, 251, 0.5);*/
+	box-shadow:0px 0px 15px 10px rgb(200, 255, 38,0.5);
+	z-index: 3;
+}
+
 /*gameboyの画像*/
 .gameboy-container > img.gameboy-img {
 	position: absolute;
@@ -559,6 +572,7 @@ img.gameboy-img:after {
 
 a.copyright {
 	color:#551A8B;
+	/*font-size:0.5em;*/
 }
 
 .member-introduction .explain {
