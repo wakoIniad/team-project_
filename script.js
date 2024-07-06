@@ -138,7 +138,9 @@ function onThemeChanging() {
         memberIntoroduction.addClass("luna");
         memberIntoroduction.removeClass("sol");
         
-        $("body").css('background-color','rgb(20,0,0)');
+        $("body").css('background-color','rgba(117,255,229,0.5)');
+        /**8775FF */
+        /** #97C7DC 7A87FF 9C97DC */
         try {
             $.cookie('theme','luna')
         } catch(e) {

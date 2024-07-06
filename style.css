@@ -431,7 +431,7 @@ img.gameboy-img:after {
 	padding: 1em;
 }
 
-#main {
+#main,body {
 	-moz-column-count: 1;
 	-webkit-column-count: 1;
 	column-count: 1;
@@ -630,4 +630,8 @@ a.copyright {
 	bottom: 10px;
 	position: fixed;
 	z-index: 5;
+}
+
+#copyright_menu {
+
 }
