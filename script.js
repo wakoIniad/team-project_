@@ -68,7 +68,7 @@ $(".gameboy-container").hover(function() {
     if(themeMode === "night") {
         ToggleGameBoyScreenDarkMode ();
         //$(this).children('.gameboy-img').attr('src','gameboy-frame-shadow.png');
-        
+
         /*$(this).children(".eyecatch-overlay").css('display','none');
         setTimeout(()=>$(this).children(".eyecatch-overlay").css('display','block'),0);
         setTimeout(()=>{
@@ -121,6 +121,7 @@ function onThemeChanging() {
         $(".member-introduction:target").css('animation', 'highlight 2.4s ease-in-out');
         memberIntoroduction.removeClass("luna");
         memberIntoroduction.addClass("sol");
+        $("body").css('background-color','rgb(0,0,0)');
         try {
             $.cookie('theme','sol')
         } catch(e) {
@@ -137,6 +138,7 @@ function onThemeChanging() {
         memberIntoroduction.addClass("luna");
         memberIntoroduction.removeClass("sol");
         
+        $("body").css('background-color','rgb(20,0,0)');
         try {
             $.cookie('theme','luna')
         } catch(e) {
@@ -183,3 +185,4 @@ gamePageLink.on('click',function(e) {
         },750);
     }
 });
+

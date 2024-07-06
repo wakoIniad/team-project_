@@ -31,5 +31,6 @@ bar.animate(1.0, function () {
         setTimeout(function() {
             $('body').addClass('loaded');
         }, 0);
+		$("body").css('overflow','scroll');
     }, 500);
 });

@@ -1,3 +1,5 @@
+
+
 #allpage {
     overflow: hidden;
 }
@@ -78,8 +80,8 @@
 }
 
 
-.double-h1 {
-    text-shadow: 5px 5px 5px rgb(50,50,90);
+.shadow-h1 {
+    text-shadow: 5px 5px 4px rgb(50,50,90);
 }
 
 
@@ -162,13 +164,15 @@
 }
 
 .photo-container .photos {
-    position: absolute;
+    /*position: absolute;*/
+    
     /*transition: 1s all;*/
     /*border-radius: 5%;*/
     box-shadow: 10px 5px 5px rgba(0,0,0,0.65);
 }
 
-.pins {
+
+.pc2 .photos {
     position: absolute;
 }
 
@@ -254,10 +258,65 @@
     }
 }
 
-.photos.p1 {
-    height: 30vmin;
+.picture-frame {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+}
+
+
+/*.pins {
+    position: absolute;
+}*/
+
+.photo-decoration.pin {
+    position: absolute;
+    top: -3vmin;
+    /*margin: auto 0;*/
+    object-fit: contain;
+    object-position: 50% 0%;
+    width: 100%;
+    height: 10vmin;
+    z-index: 2;
+    filter: drop-shadow(10px 15px 7px rgba(50,50,90,0.65));
+}
+
+/*.photo-decoration.pin:after {
+    height: 100%;
+    width: 59%;
+    transform: rotate(-90deg);
+    z-index: 3;
+
+    filter: drop-shadow(10px 25px 5px rgba(50,50,90,0.65));
+}*/
+
+.picture-frame.pf1 {
+    
     right: 10%;
     top: 15%;
+}
+
+.picture-frame.pf2 {
+    left: 0%;
+    top: 30%;
+}
+
+.picture-frame.pf3 {
+    
+    right: 50%;
+    top: 1%;
+}
+
+.picture-frame.pf4 {
+    
+    right: 40%;
+    top: 40%;
+}
+
+
+
+.photos.p1 {
+    height: 30vmin;
     transform: rotate(15deg);
     /*border: groove 10px rgb(250,220,220);*/
 	animation: kawaii-anime1 3.6s ease-in-out infinite;
@@ -266,15 +325,11 @@
 .photos.p2 {
     height: 30vmin;
     /*border: outset 10px rgb(0,0,50);*/
-    left: 0%;
-    top: 30%;
     transform: rotate(5deg);
 	animation: kawaii-anime2 3.6s ease-in-out infinite;
 }
 .photos.p3 {
     height: 30vmin;
-    right: 50%;
-    top: 1%;
     transform: rotate(-4deg);
     /*border: inset 10px rgb(0,0,0);*/
 	animation: kawaii-anime3 3.6s ease-in-out infinite;
@@ -282,8 +337,6 @@
 
 .photos.p4 {
     height: 40vmin;
-    right: 40%;
-    top: 40%;
     transform: rotate(-7deg);
     
     /*border: groove 10px rgb(230,220,250);*/
@@ -339,6 +392,9 @@
     width: 100%;
     text-align: center;
 }
+
+
+
 
 /*
 .photos::after {
