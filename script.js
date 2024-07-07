@@ -161,6 +161,12 @@ try {
         } else if(theme === 'sol') {
             $("#toggle--daynight").attr('checked',true);
         }
+    } else {
+        const isDarkmode = $('html').css('--isDarkmode');
+        console.log('darkMode: '+isDarkmode);
+        if(isDarkmode === "True" ) {
+            $("#toggle--daynight").attr('checked',false);
+        }
     }
     onThemeChanging.call(themeButton);
 } catch(e) {
@@ -172,12 +178,6 @@ gamePageLink.on('click',function(e) {
     if(themeMode === 'night') {
         if(cancelClick)e.preventDefault();
         const item = $(this).parents(".gameboy-container").children('.fluorescence');
-        /*item.css({
-            "box-shadow":"0px 0px 50px 15px rgb(168, 250, 204,0.75)",
-            "border":" solid 16px rgba(170,250,236,0.65)",
-            "visibility":" visible",
-            "opacity":" 1"
-        })*/
         item.addClass('effect-activate');
         //.addClass('');
         setTimeout(()=>{
