@@ -122,6 +122,7 @@ function onThemeChanging() {
         memberIntoroduction.removeClass("luna");
         memberIntoroduction.addClass("sol");
         $("body").css('background-color','rgb(0,0,0)');
+        $("body").css("background-image","url(los-angeles-downtown-buildings-night.jpg");
         try {
             $.cookie('theme','sol')
         } catch(e) {
@@ -137,8 +138,24 @@ function onThemeChanging() {
         skyScraperImage.css('background-image','url("skyscraper-luna.png")');
         memberIntoroduction.addClass("luna");
         memberIntoroduction.removeClass("sol");
+        $("body").css("background-image","url(skyscraper-luna.png");
         
-        $("body").css('background-color','rgba(117,255,229,0.5)');
+       // $("body").css("background-image","url(los-angeles-downtown-buildings-night.jpg");
+            //$("body").css("background-blend-mode","color-dodge")//#
+            //$("body").css("background-blend-mode","lighten")
+                //$("body").css("background-blend-mode","darken")
+        $("body").css("background-blend-mode","multiply")//##
+        //$("body").css("background-blend-mode","overlay")
+                //$("body").css("background-blend-mode","color-burn")
+        $("body").css("background-blend-mode","hard-light")//##
+        /*$("body::after").css({
+            'background-image':
+            'radial-gradient(0degre, rgba(117,255,229,0) 0%, rgba(117,255,229,1) 100%)',
+            'width':'100%','height':'20%'
+        })*/
+        
+        //$("#wrapper").css('background',)
+        $("body").css('background-color','rgba(117,255,229,1)');
         /**8775FF */
         /** #97C7DC 7A87FF 9C97DC */
         try {
