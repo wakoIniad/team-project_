@@ -122,6 +122,8 @@ function onThemeChanging() {
         memberIntoroduction.removeClass("luna");
         memberIntoroduction.addClass("sol");
         $("body").css('background-color','rgb(0,0,0)');
+        $("body").css("background-image","url(los-angeles-downtown-buildings-night.jpg");
+        $("body").css("background-blend-mode","normal")
         try {
             $.cookie('theme','sol')
         } catch(e) {
@@ -137,8 +139,13 @@ function onThemeChanging() {
         skyScraperImage.css('background-image','url("skyscraper-luna.png")');
         memberIntoroduction.addClass("luna");
         memberIntoroduction.removeClass("sol");
-        
-        $("body").css('background-color','rgba(117,255,229,0.5)');
+        $("body").css("background-image","url(skyscraper-luna.png");
+ 
+        $("body").css("background-blend-mode","multiply")//##
+        //$("body").css("background-blend-mode","hard-light")//##
+        // hard-lightの方が単体では夜感が強い色合いになるが、アクセントとして水色をいれるためにmultiply。
+
+        $("body").css('background-color','rgba(117,255,229,1)');
         /**8775FF */
         /** #97C7DC 7A87FF 9C97DC */
         try {
