@@ -407,3 +407,23 @@
     z-index: 2;
     background: #fff
 }*/
+
+
+
+.container2-text {
+    position:absolute;
+    top: -13px;
+    left: 50%;
+    width: 110%;
+    
+    text-shadow: 5px 5px 4px rgb(50,50,90);
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.last_p {
+    width: 100%;
+    text-align: center;
+}
