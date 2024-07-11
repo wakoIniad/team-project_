@@ -1,5 +1,5 @@
 #container{
-    height: 415vh;
+    height: 303vh;
 }
 
 .background {
@@ -68,3 +68,11 @@
     background: linear-gradient(90deg,rgba(255,255,255,0) 40%, #222 90%);
     position: absolute;
 }
+
+#last_container {
+    position: absolute;
+    top: 300vh;
+    left: 85%;
+    height: 5vh;
+    display: flex;
+  }

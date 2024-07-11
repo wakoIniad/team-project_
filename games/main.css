@@ -99,16 +99,6 @@ div#allpage{width:100%;}
   opacity: 0.7;
 }
 
-
-#last_container {
-  position: absolute;
-  top: 412vh;
-  left: 85%;
-  height: 5vh;
-  display: flex;
-}
-
-
 .goto_home {
   font-size:3em;
   display: block;

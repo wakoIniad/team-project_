@@ -118,3 +118,11 @@
     top: -13px;
     width: 113%;
 }
+
+#last_container {
+    position: absolute;
+    top: 412vh;
+    left: 85%;
+    height: 5vh;
+    display: flex;
+  }
