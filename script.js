@@ -117,12 +117,12 @@ function onThemeChanging() {
         blueLight.css('display', 'none');
         blueLight.css('opacity',0);
 
-        skyScraperImage.css('background-image','url("los-angeles-downtown-buildings-night.jpg")');
+        skyScraperImage.css('background-image','url("los-angeles-downtown-buildings-night_mini.jpg")');
         $(".member-introduction:target").css('animation', 'highlight 2.4s ease-in-out');
         memberIntoroduction.removeClass("luna");
         memberIntoroduction.addClass("sol");
         $("body").css('background-color','rgb(0,0,0)');
-        $("body").css("background-image","url(los-angeles-downtown-buildings-night.jpg");
+        $("body").css("background-image","url(los-angeles-downtown-buildings-night_mini.jpg");
         $("body").css("background-blend-mode","normal")
         try {
             $.cookie('theme','sol')
@@ -136,10 +136,10 @@ function onThemeChanging() {
         memberIntoroduction.css('color','#89c3eb');
         prologue.addClass("prologue-luna");
         ToggleGameBoyScreenDarkMode ();
-        skyScraperImage.css('background-image','url("skyscraper-luna.png")');
+        skyScraperImage.css('background-image','url("skyscraper-luna_mini.png")');
         memberIntoroduction.addClass("luna");
         memberIntoroduction.removeClass("sol");
-        $("body").css("background-image","url(skyscraper-luna.png");
+        $("body").css("background-image","url(skyscraper-luna_mini.png");
  
         $("body").css("background-blend-mode","multiply")//##
         //$("body").css("background-blend-mode","hard-light")//##
